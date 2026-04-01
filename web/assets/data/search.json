@@ -20,6 +20,16 @@
     "url": "contact_us.html"
   },
   {
+    "title": "AI Group Chat - دردشة جماعية بالذكاء الاصطناعي",
+    "title_en": "AI Group Chat - Multi AI Chat App",
+    "description": "حمّل AI Group Chat للأندرويد وتحدث مع عدة نماذج ذكاء اصطناعي في دردشة جماعية مباشرة مثل ChatGPT وClaude وGemini وDeepSeek.",
+    "description_en": "Download AI Group Chat for Android and chat with multiple AI models in one real-time conversation, including ChatGPT, Claude, Gemini and DeepSeek.",
+    "keywords": ["AI Group Chat", "دردشة جماعية بالذكاء الاصطناعي", "تطبيق أندرويد", "ChatGPT", "Claude", "Gemini", "DeepSeek"],
+    "keywords_en": ["ai group chat", "multi ai chat", "android ai app", "chatgpt", "claude", "gemini", "deepseek"],
+    "image": "/assets/img/AiGroupChat/logo.png",
+    "url": "AiGroupChat.html"
+  },
+  {
     "title": "أيوب العرجاني - العقل المدبر",
     "title_en": "Ayoub Alarjani - The Mastermind",
     "description": "الملف الشخصي لأيوب العرجاني، مؤسس ماوي مان. اكتشف القصة، المهارات، والفلسفة خلف الكود.",
