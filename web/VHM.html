@@ -1,0 +1,76 @@
+<!DOCTYPE html><html lang="en" dir="ltr" data-htmx-folder="templates"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title data-tr="مرآة اليد الافتراضية — mawi.li">Virtual Hand Mirror — mawi.li</title><meta
+name="title"
+content="Virtual Hand Mirror — mawi.li"
+data-tr="مرآة اليد الافتراضية — mawi.li"
+/><meta
+name="description"
+content="A realtime hand-tracking mirror experience built for the web with MediaPipe."
+data-tr="تجربة مرآة لتتبع اليد في الوقت الحقيقي على الويب باستخدام MediaPipe."
+/><meta
+name="keywords"
+content="Virtual Hand Mirror, hand tracking, MediaPipe, webcam, mawi.li"
+data-tr="مرآة اليد الافتراضية, تتبع اليد, MediaPipe, كاميرا الويب, mawi.li"
+/><meta name="author" content="Mawi Ayoub" /><meta name="robots" content="index, follow" /><meta name="language" content="English, Arabic" /><meta name="revisit-after" content="30 days" /><meta property="og:type" content="website" /><meta property="og:url" content="https://mawi.li/VHM.html" /><meta
+property="og:title"
+content="Virtual Hand Mirror — mawi.li"
+data-tr="مرآة اليد الافتراضية — mawi.li"
+/><meta
+property="og:description"
+content="A realtime hand-tracking mirror experience built for the web with MediaPipe."
+data-tr="تجربة مرآة لتتبع اليد في الوقت الحقيقي على الويب باستخدام MediaPipe."
+/><meta property="og:site_name" content="Mawi.li" /><meta property="og:locale" content="en_US" /><meta property="og:locale:alternate" content="ar_SA" /><meta property="twitter:card" content="summary_large_image" /><meta property="twitter:url" content="https://mawi.li/VHM.html" /><meta
+property="twitter:title"
+content="Virtual Hand Mirror — mawi.li"
+data-tr="مرآة اليد الافتراضية — mawi.li"
+/><meta
+property="twitter:description"
+content="A realtime hand-tracking mirror experience built for the web with MediaPipe."
+data-tr="تجربة مرآة لتتبع اليد في الوقت الحقيقي على الويب باستخدام MediaPipe."
+/><meta property="twitter:image" content="https://mawi.li/assets/img/mawiman/Icon-bg.svg" /><meta property="twitter:creator" content="@mawi_officiel" /><meta name="application-name" content="Mawi.li" /><meta name="apple-mobile-web-app-title" content="Mawi.li" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="mobile-web-app-capable" content="yes" /><meta name="apple-mobile-web-app-status-bar-style" content="default" /><link rel="canonical" href="https://mawi.li/VHM.html" /><link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /><link rel="icon" type="image/x-icon" href="favicon.ico" /><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link rel="preload" as="style" href="assets/css/output.css?v=2026.06.24.2.33.04" /><link rel="stylesheet" href="assets/css/output.css?v=2026.06.24.2.33.04" /><link rel="stylesheet" href="assets/css/VHM.css?v=2026.06.24.2.33.04" /><style>
+body {
+opacity: 0;
+transition: opacity 0.4s ease;
+}
+
+body.ready {
+opacity: 1;
+}
+</style></head><body><htmx>navbar</htmx><main class="min-h-screen mt-15 vhm-page"><section class="hero-section vhm-hero-section vhm-overview-only"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><div class="vhm-hero-card"><div class="vhm-hero-copy"><div class="vhm-hero-badge"><span class="material-symbols-rounded">back_hand</span><span data-tr="تجربة ويب تفاعلية">Interactive Web Experience</span></div><h1 class="vhm-page-title" data-tr="مرآة اليد الافتراضية">Virtual Hand Mirror</h1><p
+class="vhm-page-description"
+data-tr="واجهة تتبع يد مباشرة داخل تصميم mawi.li نفسه، مع مزامنة فورية للكاميرا، عرض بصري حي، ولوحة معلومات بنفس هوية الموقع."
+>
+A live hand-tracking interface wrapped in the same mawi.li design system, with
+realtime camera sync, a polished visual stage, and site-native UI panels.
+</p><div class="vhm-hero-actions"><a href="#mirror-experience" class="cta-button" data-launch-mirror><span class="material-symbols-rounded">videocam</span><span data-tr="شغّل التجربة">Launch Mirror</span></a><a href="/software.html" class="cta-button vhm-secondary-action"><span class="material-symbols-rounded">apps</span><span data-tr="كل البرمجيات">All Software</span></a></div></div><div class="vhm-hero-meta"><div class="vhm-meta-card"><span class="vhm-meta-label" data-tr="المحرك">Engine</span><strong>MediaPipe Hands</strong></div><div class="vhm-meta-card"><span class="vhm-meta-label" data-tr="الوضع">Mode</span><strong data-tr="مرآة متعددة الأيدي">Multi-Hand Mirror</strong></div><div class="vhm-meta-card"><span class="vhm-meta-label" data-tr="التجربة">Experience</span><strong data-tr="سلسة وعالية الدقة">Smooth & Precise</strong></div></div></div></div></section><section id="mirror-experience" class="vhm-stage-section" aria-hidden="true"><div class="vhm-stage-frame" id="vhm-stage" aria-label="Virtual Hand Mirror interface"><video id="input-video" autoplay playsinline muted></video><canvas id="paint-canvas" aria-label="Drawing canvas"></canvas><canvas id="hand-canvas" aria-label="Hand tracking canvas"></canvas><section class="vhm-topbar" aria-live="polite"><div class="vhm-title-group"><a
+href="/VHM.html"
+class="vhm-exit-button"
+aria-label="Back to Virtual Hand Mirror page"
+title="Back"
+><span class="material-symbols-rounded">arrow_back</span></a><div class="vhm-title" data-tr="مرآة اليد الافتراضية">Virtual Hand Mirror</div><label class="vhm-effect-control" for="effect-select"><span class="vhm-effect-label" data-tr="الإفكت">Effect</span><select id="effect-select" class="vhm-effect-select" aria-label="Hand render effect"><option value="skeleton" data-tr="رسم اليد">Skeleton</option><option value="points" data-tr="نقاط المفاصل">Points</option><option value="draw" data-tr="الرسم">Draw</option></select></label></div><p class="vhm-fps-readout">FPS: <span id="fps-text">0</span></p></section><section class="vhm-toolbar" id="draw-toolbar" aria-label="Drawing toolbar"><div class="vhm-toolbar-group vhm-toolbar-group--colors"><button type="button" class="vhm-tool-button vhm-color-swatch" data-color="#46b6ff" aria-label="Blue"></button><button type="button" class="vhm-tool-button vhm-color-swatch" data-color="#ff7aa2" aria-label="Pink"></button><button type="button" class="vhm-tool-button vhm-color-swatch" data-color="#ffd166" aria-label="Gold"></button><button type="button" class="vhm-tool-button vhm-color-swatch" data-color="#7cf29a" aria-label="Green"></button><button type="button" class="vhm-tool-button vhm-color-swatch" data-color="#c89bff" aria-label="Violet"></button><button type="button" class="vhm-tool-button vhm-color-swatch" data-color="#ffffff" aria-label="White"></button><button type="button" class="vhm-tool-button vhm-color-swatch" data-color="#ff9f43" aria-label="Orange"></button><button type="button" class="vhm-tool-button vhm-color-swatch" data-color="#00d1b2" aria-label="Teal"></button></div><div class="vhm-toolbar-group"><button type="button" class="vhm-tool-button" data-tool="pen" data-tr-title="القلم" title="Pen"><span class="material-symbols-rounded">edit</span></button><button type="button" class="vhm-tool-button" data-tool="eraser" data-tr-title="الممحاة" title="Eraser"><span class="material-symbols-rounded">ink_eraser</span></button><button type="button" class="vhm-tool-button" data-action="undo" data-tr-title="تراجع" title="Undo"><span class="material-symbols-rounded">undo</span></button><button type="button" class="vhm-tool-button" data-action="redo" data-tr-title="إعادة" title="Redo"><span class="material-symbols-rounded">redo</span></button><button type="button" class="vhm-tool-button" data-action="clear" data-tr-title="مسح الكل" title="Clear Canvas"><span class="material-symbols-rounded">delete_sweep</span></button></div></section><section
+class="permission-message hidden"
+id="permission-message"
+aria-live="assertive"
+><h2 data-tr="مطلوب إذن الكاميرا">Camera access required</h2><p data-tr="اسمح بالوصول إلى كاميرا الويب لتفعيل تتبع اليد في الوقت الحقيقي.">
+Allow webcam access to activate real-time hand tracking.
+</p></section><section class="vhm-delete-zone" aria-hidden="true"><span class="material-symbols-rounded">delete</span><span data-tr="اسحب الرسمة إلى هنا للحذف">Drag drawing here to delete</span></section></div></section><section class="features-section vhm-features-section vhm-overview-only"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><div class="features-grid"><div class="feature-card"><div class="feature-icon"><span class="material-symbols-rounded">gesture</span></div><h3 class="feature-title" data-tr="تتبع متعدد الأيدي">Multi-Hand Tracking</h3><p
+class="feature-description"
+data-tr="التجربة أصبحت تتعرف على أكثر من يد في الوقت نفسه مع معالجة أدق للحركة وتتبّع أكثر ثباتًا."
+>
+The experience now tracks more than one hand at the same time with finer motion
+processing and more stable hand recognition.
+</p></div><div class="feature-card"><div class="feature-icon"><span class="material-symbols-rounded">speed</span></div><h3 class="feature-title" data-tr="سلاسة وثبات">Smooth Motion Stability</h3><p
+class="feature-description"
+data-tr="تم تقليل الرجفة والتقطّع عبر تنعيم تكيفي للنقاط حتى تبدو حركة اليد أكثر سلاسة مع الحفاظ على سرعة الاستجابة."
+>
+Adaptive landmark smoothing reduces jitter and choppy motion so the hand feels more
+fluid while keeping the tracking responsive.
+</p></div><div class="feature-card"><div class="feature-icon"><span class="material-symbols-rounded">palette</span></div><h3 class="feature-title" data-tr="متكاملة مع الموقع">Site-Native Styling</h3><p
+class="feature-description"
+data-tr="الصفحة الآن تستعمل نفس الهيدر والفوتر والثيمات والهوية البصرية المعتمدة في بقية الموقع."
+>
+The page now uses the same navbar, footer, theming system, and visual language as
+the rest of the website.
+</p></div></div></div></section></main><htmx>footer</htmx><script
+src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"
+crossorigin="anonymous"
+></script><script src="assets/js/VHM.js?v=2026.06.24.2.33.04"></script><script src="assets/js/script.js?v=2026.06.24.2.33.04" data-cfasync="false"></script><script src="assets/js/htmx.js?v=2026.06.24.2.33.04" data-cfasync="false"></script><script src="assets/js/tr.js?v=2026.06.24.2.33.04" data-cfasync="false"></script><script src="assets/js/theme.js?v=2026.06.24.2.33.04" data-cfasync="false"></script><script src="assets/js/notifications.js?v=2026.06.24.2.33.04" data-cfasync="false"></script></body></html>
