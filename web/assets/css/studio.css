@@ -21,6 +21,25 @@ html {
 scroll-behavior:smooth;
 scroll-padding-top:110px
 }
+html[data-theme-choice="system"] {color-scheme:light dark}
+html:not([data-ready="true"]) #site-header,html:not([data-ready="true"]) #main,html:not([data-ready="true"]) #site-footer {visibility:hidden}
+.boot-loader {
+position:fixed; z-index:9999; inset:0; display:flex; flex-direction:column;
+justify-content:center; align-items:center; gap:18px; background:var(--bg); color:var(--text);
+transition:opacity .2s ease,visibility .2s ease
+}
+html[data-ready="true"] .boot-loader {visibility:hidden; opacity:0; pointer-events:none}
+.loader-mark {
+display:block; width:38px; height:38px; border:3px solid var(--border); border-top-color:var(--accent); border-radius:50%;
+animation:loader-spin .8s linear infinite
+}
+.loader-caption {font-size:14px; color:var(--muted)}
+.loader-dots {display:flex; gap:6px}
+.loader-dots i {width:6px; height:6px; border-radius:50%; background:var(--accent); animation:loader-dot .9s ease-in-out infinite alternate}
+.loader-dots i:nth-child(2) {animation-delay:.18s}
+.loader-dots i:nth-child(3) {animation-delay:.36s}
+@keyframes loader-spin {to {transform:rotate(360deg)}}
+@keyframes loader-dot {to {transform:translateY(-5px);opacity:.45}}
 body {
 margin:0;
 background:var(--bg);
@@ -1213,6 +1232,7 @@ scroll-behavior:auto
 transition:none!important;
 animation:none!important
 }
+.loader-mark,.loader-dots i {animation:none}
 }
 html:not([data-interactive]) .preferences,html:not([data-interactive]) .menu-toggle {
 display:none
